@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- inherit from the AppCompat theme -->
+    <style
+        name="AppTheme"
+        parent="Theme.AppCompat">
+    </style>
+</resources>
