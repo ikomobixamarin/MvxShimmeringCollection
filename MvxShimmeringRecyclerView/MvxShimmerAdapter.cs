@@ -3,8 +3,9 @@ using Android.Views;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross.Platforms.Android.Binding.BindingContext;
 using Supercharge;
+using MvxShimmering;
 
-namespace MvxShimmeringRecyclerView
+namespace MvxShimmering
 {
     public class MvxShimmerAdapter : MvxRecyclerAdapter
     {
@@ -16,13 +17,22 @@ namespace MvxShimmeringRecyclerView
         {
             var view = base.InflateViewForHolder(parent, viewType, bindingContext);
 
-            if (viewType == 0)
+            if (viewType == Constants.ShimmerPlaceholderViewType)
             {
-                var shimmerContainer = view.FindViewById<ShimmerLayout>(Resource.Id.shimmer_root);
-                shimmerContainer.SetShimmerAnimationDuration(1000);
-                shimmerContainer.StartShimmerAnimation();
-            }
+                var shimmerContainer = view as ShimmerLayout;
 
+                if (shimmerContainer == null)
+                {
+                    throw new InvalidRootViewException();
+                }
+
+                if (shimmerContainer != null)
+                {
+                    // TODO: make duration customizable
+                    shimmerContainer.SetShimmerAnimationDuration(Constants.ShimmerAnimationDuration);
+                    shimmerContainer.StartShimmerAnimation();
+                }
+            }
 
             return view;
         }

@@ -9,5 +9,6 @@
         android:layout_height="match_parent"
         android:id="@+id/recyclerview"
         local:MvxBind="ItemsSource Items"
-        local:MvxItemTemplate="@layout/list_item" />
+        local:MvxItemTemplate="@layout/list_item"
+        local:MvxShimmerTemplateId="@layout/item_shimmer" />
 </LinearLayout>

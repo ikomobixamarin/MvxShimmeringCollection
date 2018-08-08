@@ -133,6 +133,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\list_item.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\layout\item_shimmer.axml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvxShimmeringCollection.Shared\MvxShimmeringCollection.Shared.csproj">

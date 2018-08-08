@@ -7,7 +7,7 @@
     <ProjectGuid>{09C632A8-801D-4D06-B1EE-A8192786493D}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>MvxShimmeringRecyclerView</RootNamespace>
+    <RootNamespace>MvxShimmering</RootNamespace>
     <AssemblyName>MvxShimmeringRecyclerView</AssemblyName>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -82,6 +82,8 @@
     <Compile Include="ShimmerItemTemplateSelector.cs" />
     <Compile Include="ShimmerFakePlaceHolder.cs" />
     <Compile Include="MvxShimmerAdapter.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="InvalidRootViewException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -89,11 +91,8 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\layout\item_shimmer.axml" />
     <AndroidResource Include="Resources\values\colors.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\layout\" />
+    <AndroidResource Include="Resources\values\MvxShimmerRecyclerViewAttributes.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />

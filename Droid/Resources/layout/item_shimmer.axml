@@ -15,15 +15,5 @@
             android:layout_width="match_parent"
             android:layout_height="10dp"
             android:background="@color/demo_light_transparent" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/demo_light_transparent" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/demo_light_transparent" />
     </LinearLayout>
 </io.supercharge.shimmerlayout.ShimmerLayout>

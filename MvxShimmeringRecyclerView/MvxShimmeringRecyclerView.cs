@@ -4,11 +4,10 @@ using Android.Runtime;
 using Android.Util;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using System.Collections;
-using MvxShimmeringRecyclerView;
 using System.Diagnostics;
 using System.Collections.Generic;
 
-namespace Shimmering
+namespace MvxShimmering
 {
     [Register("shimmering.MvxShimmeringRecyclerView")]
     public class MvxShimmeringRecyclerView : MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
@@ -49,10 +48,14 @@ namespace Shimmering
             }
         }
 
+        public int MvxShimmerTemplateId
+        {
+            get;
+            private set;
+        }
 
         public MvxShimmeringRecyclerView(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
         {
-            this.ItemTemplateSelector = new ShimmerItemTemplateSelector(this.ItemTemplateId);
         }
 
         public MvxShimmeringRecyclerView(Context context, IAttributeSet attrs) : this(context, attrs, 0, new MvxShimmerAdapter())
@@ -61,12 +64,24 @@ namespace Shimmering
 
         public MvxShimmeringRecyclerView(Context context, IAttributeSet attrs, int defStyle) : base(context, attrs, defStyle)
         {
-            this.ItemTemplateSelector = new ShimmerItemTemplateSelector(this.ItemTemplateId);
         }
 
         public MvxShimmeringRecyclerView(Context context, IAttributeSet attrs, int defStyle, IMvxRecyclerAdapter adapter) : base(context, attrs, defStyle, adapter)
         {
-            this.ItemTemplateSelector = new ShimmerItemTemplateSelector(this.ItemTemplateId);
+            Android.Content.Res.TypedArray a = context.ObtainStyledAttributes(
+                attrs,
+                MvxShimmering.Resource.Styleable.MvxShimmeringRecyclerView,
+                defStyle,
+                0);
+
+            this.MvxShimmerTemplateId = a.GetResourceId(MvxShimmering.Resource.Styleable.MvxShimmeringRecyclerView_MvxShimmerTemplateId, -1);
+
+            if (this.MvxShimmerTemplateId == -1)
+            {
+                throw new ArgumentNullException($"You must provide a value for the {nameof(MvxShimmering.Resource.Styleable.MvxShimmeringRecyclerView_MvxShimmerTemplateId)} attribute");
+            }
+
+            this.ItemTemplateSelector = new ShimmerItemTemplateSelector(this.ItemTemplateId, this.MvxShimmerTemplateId);
             this.ItemsSource = null;
         }
     }

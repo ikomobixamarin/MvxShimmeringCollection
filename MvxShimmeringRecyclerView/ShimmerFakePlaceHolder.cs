@@ -1,5 +1,5 @@
 ﻿using System;
-namespace MvxShimmeringRecyclerView
+namespace MvxShimmering
 {
     public class ShimmerFakePlaceHolder
     {
