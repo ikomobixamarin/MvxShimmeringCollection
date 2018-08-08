@@ -10,17 +10,17 @@ using System.CodeDom.Compiler;
 
 namespace MvxShimmeringCollection.iOS
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("MyTableViewCell")]
+    partial class MyTableViewCell
     {
         [Outlet]
-        UIKit.UITableView tableView { get; set; }
+        UIKit.UILabel label { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (tableView != null) {
-                tableView.Dispose ();
-                tableView = null;
+            if (label != null) {
+                label.Dispose ();
+                label = null;
             }
         }
     }
