@@ -41,7 +41,14 @@ namespace MvxShimmering
                         new ShimmerFakePlaceHolder()
                     };
 
+                    // Prevent scrolling while placeholders are displayed
+                    this.LayoutFrozen = true;
+
                     System.Diagnostics.Debug.WriteLine("Set MvxShimmeringAdapter");
+                }
+                else
+                {
+                    this.LayoutFrozen = false;
                 }
 
                 base.ItemsSource = itemsToBind;

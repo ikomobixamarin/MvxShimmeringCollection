@@ -4,6 +4,9 @@ using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross.Platforms.Android.Binding.BindingContext;
 using Supercharge;
 using MvxShimmering;
+using Java.Lang;
+using Android.Support.V7.Widget;
+using System.Diagnostics;
 
 namespace MvxShimmering
 {
@@ -36,5 +39,6 @@ namespace MvxShimmering
 
             return view;
         }
+
     }
 }

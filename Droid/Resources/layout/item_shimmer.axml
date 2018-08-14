@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <io.supercharge.shimmerlayout.ShimmerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/shimmer_root"
     android:background="@android:color/white"
     android:layout_margin="16dp"
     android:layout_width="match_parent"
@@ -14,6 +13,16 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="10dp"
+            android:background="@color/demo_light_transparent" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/demo_light_transparent" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="5dp"
             android:background="@color/demo_light_transparent" />
     </LinearLayout>
 </io.supercharge.shimmerlayout.ShimmerLayout>

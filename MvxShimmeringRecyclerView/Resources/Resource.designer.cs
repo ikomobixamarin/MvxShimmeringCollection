@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("MvxShimmeringRecyclerView.Resource", IsApplication=false)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("MvxShimmering.Resource", IsApplication=false)]
 
-namespace MvxShimmeringRecyclerView
+namespace MvxShimmering
 {
 	
 	
@@ -41,6 +41,9 @@ namespace MvxShimmeringRecyclerView
 			
 			// aapt resource value: 0x7f010016
 			public static int MvxLang = 2130771990;
+			
+			// aapt resource value: 0x7f01001b
+			public static int MvxShimmerTemplateId = 2130771995;
 			
 			// aapt resource value: 0x7f010017
 			public static int MvxTemplate = 2130771991;
@@ -314,20 +317,20 @@ namespace MvxShimmeringRecyclerView
 			// aapt resource value: 0x7f050008
 			public static int MvxBindingTagUnique = 2131034120;
 			
-			// aapt resource value: 0x7f05000f
-			public static int action_container = 2131034127;
+			// aapt resource value: 0x7f05000e
+			public static int action_container = 2131034126;
 			
-			// aapt resource value: 0x7f05001b
-			public static int action_divider = 2131034139;
+			// aapt resource value: 0x7f05001a
+			public static int action_divider = 2131034138;
+			
+			// aapt resource value: 0x7f05000f
+			public static int action_image = 2131034127;
 			
 			// aapt resource value: 0x7f050010
-			public static int action_image = 2131034128;
+			public static int action_text = 2131034128;
 			
-			// aapt resource value: 0x7f050011
-			public static int action_text = 2131034129;
-			
-			// aapt resource value: 0x7f05001c
-			public static int actions = 2131034140;
+			// aapt resource value: 0x7f05001b
+			public static int actions = 2131034139;
 			
 			// aapt resource value: 0x7f050009
 			public static int async = 2131034121;
@@ -335,20 +338,20 @@ namespace MvxShimmeringRecyclerView
 			// aapt resource value: 0x7f05000a
 			public static int blocking = 2131034122;
 			
-			// aapt resource value: 0x7f05001a
-			public static int chronometer = 2131034138;
+			// aapt resource value: 0x7f050019
+			public static int chronometer = 2131034137;
 			
 			// aapt resource value: 0x7f05000b
 			public static int forever = 2131034123;
 			
-			// aapt resource value: 0x7f050013
-			public static int icon = 2131034131;
+			// aapt resource value: 0x7f050012
+			public static int icon = 2131034130;
 			
-			// aapt resource value: 0x7f05001d
-			public static int icon_group = 2131034141;
+			// aapt resource value: 0x7f05001c
+			public static int icon_group = 2131034140;
 			
-			// aapt resource value: 0x7f050016
-			public static int info = 2131034134;
+			// aapt resource value: 0x7f050015
+			public static int info = 2131034133;
 			
 			// aapt resource value: 0x7f05000c
 			public static int italic = 2131034124;
@@ -365,23 +368,20 @@ namespace MvxShimmeringRecyclerView
 			// aapt resource value: 0x7f05000d
 			public static int normal = 2131034125;
 			
-			// aapt resource value: 0x7f050018
-			public static int notification_background = 2131034136;
+			// aapt resource value: 0x7f050017
+			public static int notification_background = 2131034135;
+			
+			// aapt resource value: 0x7f050013
+			public static int notification_main_column = 2131034131;
+			
+			// aapt resource value: 0x7f050011
+			public static int notification_main_column_container = 2131034129;
+			
+			// aapt resource value: 0x7f050016
+			public static int right_icon = 2131034134;
 			
 			// aapt resource value: 0x7f050014
-			public static int notification_main_column = 2131034132;
-			
-			// aapt resource value: 0x7f050012
-			public static int notification_main_column_container = 2131034130;
-			
-			// aapt resource value: 0x7f050017
-			public static int right_icon = 2131034135;
-			
-			// aapt resource value: 0x7f050015
-			public static int right_side = 2131034133;
-			
-			// aapt resource value: 0x7f05000e
-			public static int shimmer_root = 2131034126;
+			public static int right_side = 2131034132;
 			
 			// aapt resource value: 0x7f050003
 			public static int tag_transition_group = 2131034115;
@@ -392,8 +392,8 @@ namespace MvxShimmeringRecyclerView
 			// aapt resource value: 0x7f050005
 			public static int text2 = 2131034117;
 			
-			// aapt resource value: 0x7f050019
-			public static int time = 2131034137;
+			// aapt resource value: 0x7f050018
+			public static int time = 2131034136;
 			
 			// aapt resource value: 0x7f050006
 			public static int title = 2131034118;
@@ -428,25 +428,22 @@ namespace MvxShimmeringRecyclerView
 		{
 			
 			// aapt resource value: 0x7f030000
-			public static int item_shimmer = 2130903040;
+			public static int notification_action = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public static int notification_action = 2130903041;
+			public static int notification_action_tombstone = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public static int notification_action_tombstone = 2130903042;
+			public static int notification_template_custom_big = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public static int notification_template_custom_big = 2130903043;
+			public static int notification_template_icon_group = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public static int notification_template_icon_group = 2130903044;
+			public static int notification_template_part_chronometer = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public static int notification_template_part_chronometer = 2130903045;
-			
-			// aapt resource value: 0x7f030006
-			public static int notification_template_part_time = 2130903046;
+			public static int notification_template_part_time = 2130903045;
 			
 			static Layout()
 			{
@@ -606,6 +603,12 @@ namespace MvxShimmeringRecyclerView
 			
 			// aapt resource value: 0
 			public static int MvxRecyclerView_MvxTemplateSelector = 0;
+			
+			public static int[] MvxShimmeringRecyclerView = new int[] {
+					2130771995};
+			
+			// aapt resource value: 0
+			public static int MvxShimmeringRecyclerView_MvxShimmerTemplateId = 0;
 			
 			public static int[] RecyclerView = new int[] {
 					16842948,

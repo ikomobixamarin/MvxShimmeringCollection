@@ -29,7 +29,7 @@ namespace MvxShimmeringCollection.Shared
 
         private async Task FakeLoad()
         {
-            // Simulate long-running webservice call
+            // Simulate long-running loading call
             await Task.Delay(5000).ConfigureAwait(false);
 
             // Should be your ViewModels

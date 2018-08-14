@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata minClientVersion="">
+    <id>ikomobi.mvxshimmeringrecyclerview</id>
+    <version>1.0.0</version>
+    <title></title>
+    <authors>Ikomobi</authors>
+    <owners>Ikomobi</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/ikomobixamarin/MvxShimmeringCollection</projectUrl>
+    <description>Support for Shimmering placeholders in MvxRecyclerViews</description>
+    <summary></summary>
+    <releaseNotes></releaseNotes>
+    <copyright></copyright>
+    <language></language>
+    <tags></tags>
+    <dependencies>
+      <group targetFramework="MonoAndroid8.1">
+        <dependency id="MvvmCross" version="6.1.2" />
+        <dependency id="MvvmCross.Droid.Support.V7.RecyclerView" version="6.1.2" />
+        <dependency id="Xamarin.Android.Arch.Core.Common" version="1.0.0.1" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.Common" version="1.0.3.1" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.Runtime" version="1.0.3.1" />
+        <dependency id="Xamarin.Android.ShimmerLayout" version="0.5.0" />
+        <dependency id="Xamarin.Android.Support.Annotations" version="27.0.2.1" />
+        <dependency id="Xamarin.Android.Support.Compat" version="27.0.2.1" />
+        <dependency id="Xamarin.Android.Support.Core.UI" version="27.0.2.1" />
+        <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="27.0.2.1" />
+        <dependency id="Xamarin.Build.Download" version="0.4.11" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="Mono.Android" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="System" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="MonoAndroid8.1" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="/Users/Adrien/Git/MvxShimmeringCollection/MvxShimmeringRecyclerView/bin/Release/MvxShimmeringRecyclerView.dll" target="lib/monoandroid81/MvxShimmeringRecyclerView.dll" />
+  </files>
+</package>
