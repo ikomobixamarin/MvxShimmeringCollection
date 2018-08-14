@@ -6,6 +6,7 @@ using MvvmCross.Droid.Support.V7.RecyclerView;
 using System.Collections;
 using System.Diagnostics;
 using System.Collections.Generic;
+using MvvmCross.Droid.Support.V7.RecyclerView.ItemTemplates;
 
 namespace MvxShimmering
 {
@@ -88,8 +89,16 @@ namespace MvxShimmering
                 throw new ArgumentNullException($"You must provide a value for the {nameof(MvxShimmering.Resource.Styleable.MvxShimmeringRecyclerView_MvxShimmerTemplateId)} attribute");
             }
 
-            this.ItemTemplateSelector = new ShimmerItemTemplateSelector(this.ItemTemplateId, this.MvxShimmerTemplateId);
+            base.ItemTemplateSelector = new ShimmerItemTemplateSelector(
+                this.ItemTemplateId,
+                this.MvxShimmerTemplateId);
             this.ItemsSource = null;
+        }
+
+        public new IMvxTemplateSelector ItemTemplateSelector
+        {
+            get { return base.ItemTemplateSelector; }
+            set { base.ItemTemplateSelector = new ShimmerItemTemplateSelector(value, this.MvxShimmerTemplateId); }
         }
     }
 }

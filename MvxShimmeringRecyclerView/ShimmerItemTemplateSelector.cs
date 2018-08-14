@@ -7,25 +7,57 @@ namespace MvxShimmering
     {
         private int realItemTemplateId;
         private int shimmerTemplateId;
+        private IMvxTemplateSelector templateSelector;
+        private bool hasTemplateSelector;
 
         public ShimmerItemTemplateSelector(int realItemTemplateId, int shimmerTemplateId)
+            : this(shimmerTemplateId)
         {
             this.realItemTemplateId = realItemTemplateId;
+        }
+
+        public ShimmerItemTemplateSelector(IMvxTemplateSelector templateSelector, int shimmerTemplateId)
+            : this(shimmerTemplateId)
+        {
+            this.templateSelector = templateSelector;
+            this.hasTemplateSelector = true;
+        }
+
+        private ShimmerItemTemplateSelector(int shimmerTemplateId)
+        {
             this.shimmerTemplateId = shimmerTemplateId;
         }
 
         public override int GetItemLayoutId(int fromViewType)
         {
-            return fromViewType == Constants.ShimmerPlaceholderViewType ?
-                                            this.shimmerTemplateId :
-                                            this.realItemTemplateId;
+            if (this.hasTemplateSelector)
+            {
+                return fromViewType == Constants.ShimmerPlaceholderViewType ?
+                                    this.shimmerTemplateId :
+                                    this.templateSelector.GetItemLayoutId(fromViewType);
+            }
+            else
+            {
+                return fromViewType == Constants.ShimmerPlaceholderViewType ?
+                                           this.shimmerTemplateId :
+                                           this.realItemTemplateId;
+            }
         }
 
         protected override int SelectItemViewType(object forItemObject)
         {
-            return forItemObject is ShimmerFakePlaceHolder ?
-                Constants.ShimmerPlaceholderViewType :
-                1;
+            if (this.hasTemplateSelector)
+            {
+                return forItemObject is ShimmerFakePlaceHolder ?
+                    Constants.ShimmerPlaceholderViewType :
+                    this.templateSelector.GetItemViewType(forItemObject);
+            }
+            else
+            {
+                return forItemObject is ShimmerFakePlaceHolder ?
+                          Constants.ShimmerPlaceholderViewType :
+                          1;
+            }
         }
     }
 }
