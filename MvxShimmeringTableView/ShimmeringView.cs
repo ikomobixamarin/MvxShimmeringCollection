@@ -66,10 +66,10 @@ namespace MvxShimmering
 
         public void Start(int count = 3)
         {
-            if (this.IsShimmering)
-            {
-                return;
-            }
+            //if (this.IsShimmering)
+            //{
+            //    return;
+            //}
 
             CATransaction.Begin();
             CATransaction.CompletionBlock = this.Stop;

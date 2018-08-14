@@ -58,6 +58,7 @@
     <Compile Include="MvxShimmeringSimpleTableViewSource.cs" />
     <Compile Include="ShimmeringView.cs" />
     <Compile Include="ShimmerFakeCell.cs" />
+    <Compile Include="ShimmerAnimationHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
