@@ -24,10 +24,18 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn4-6T-wDL">
+                        <rect key="frame" x="10" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="3Ax-rH-M7N" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="55" id="Os4-ug-Uoi"/>
                     <constraint firstAttribute="bottom" secondItem="3Ax-rH-M7N" secondAttribute="bottom" constant="65.5" id="SUi-3t-ois"/>
+                    <constraint firstItem="jn4-6T-wDL" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="10" id="aV8-ZO-oJv"/>
+                    <constraint firstItem="jn4-6T-wDL" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="11" id="n8L-CL-I23"/>
                     <constraint firstItem="3Ax-rH-M7N" firstAttribute="centerX" secondItem="YTl-1W-gDM" secondAttribute="centerX" id="zNA-Aa-pWO"/>
                 </constraints>
             </tableViewCellContentView>

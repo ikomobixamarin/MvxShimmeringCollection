@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxShimmeringCollection.Sha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxShimmeringRecyclerView", "MvxShimmeringRecyclerView\MvxShimmeringRecyclerView.csproj", "{09C632A8-801D-4D06-B1EE-A8192786493D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxShimmeringTableView", "MvxShimmeringTableView\MvxShimmeringTableView.csproj", "{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,5 +69,17 @@ Global
 		{09C632A8-801D-4D06-B1EE-A8192786493D}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{09C632A8-801D-4D06-B1EE-A8192786493D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{09C632A8-801D-4D06-B1EE-A8192786493D}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Release|iPhone.Build.0 = Release|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

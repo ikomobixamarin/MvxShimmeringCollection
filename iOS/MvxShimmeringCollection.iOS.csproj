@@ -84,6 +84,12 @@
     <Reference Include="MvvmCross">
       <HintPath>..\packages\MvvmCross.6.1.2\lib\xamarinios10\MvvmCross.dll</HintPath>
     </Reference>
+    <Reference Include="Naxam.Shimmer.iOS">
+      <HintPath>..\packages\Naxam.Shimmer.iOS.1.0.2\lib\Xamarin.iOS10\Naxam.Shimmer.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.iOS.DGActivityIndicatorViewBinding">
+      <HintPath>..\packages\Xamarin.iOS.DGActivityIndicatorView.1.0.1\lib\Xamarin.iOS10\Xamarin.iOS.DGActivityIndicatorViewBinding.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -96,6 +102,7 @@
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="MyTableViewCell.xib" />
+    <InterfaceDefinition Include="ShimmeringTableViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -114,11 +121,19 @@
     <Compile Include="MyTableViewCell.designer.cs">
       <DependentUpon>MyTableViewCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShimmeringTableViewCell.cs" />
+    <Compile Include="ShimmeringTableViewCell.designer.cs">
+      <DependentUpon>ShimmeringTableViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvxShimmeringCollection.Shared\MvxShimmeringCollection.Shared.csproj">
       <Project>{D8C88F20-FFF1-4E18-A122-395491596BF4}</Project>
       <Name>MvxShimmeringCollection.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvxShimmeringTableView\MvxShimmeringTableView.csproj">
+      <Project>{F7487C9F-2EE9-4F5A-8D11-919835BFD81A}</Project>
+      <Name>MvxShimmeringTableView</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

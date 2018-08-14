@@ -6,15 +6,14 @@ using MvxShimmeringCollection.Shared;
 using MvvmCross.Platforms.Ios.Presenters.Attributes;
 using MvvmCross.Platforms.Ios.Binding.Views;
 using MvvmCross.Binding.BindingContext;
+using MvxShimmering;
 
 namespace MvxShimmeringCollection.iOS
 {
     [MvxFromStoryboard(StoryboardName = "Main")]
-    [MvxRootPresentation]
+    [MvxRootPresentation(WrapInNavigationController = true)]
     public partial class ViewController : MvxViewController<MainViewModel>
     {
-        int count = 1;
-
         public ViewController(IntPtr handle) : base(handle)
         {
         }
@@ -23,10 +22,13 @@ namespace MvxShimmeringCollection.iOS
         {
             base.ViewDidLoad();
 
+            var viewSource = new MvxShimmeringSimpleTableViewSource(this.tableView, MyTableViewCell.Key);
+
             this.tableView.RowHeight = (nfloat)150;
             this.tableView.RegisterNibForCellReuse(MyTableViewCell.Nib, MyTableViewCell.Key);
+            viewSource.SetShimmeringPlaceholder(ShimmeringTableViewCell.Nib, ShimmeringTableViewCell.Key);
 
-            var viewSource = new MvxSimpleTableViewSource(this.tableView, MyTableViewCell.Key);
+            this.tableView.Source = viewSource;
 
             var set = this.CreateBindingSet<ViewController, MainViewModel>();
 

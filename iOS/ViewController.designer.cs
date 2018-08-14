@@ -14,10 +14,19 @@ namespace MvxShimmeringCollection.iOS
     partial class ViewController
     {
         [Outlet]
+        UIKit.UILabel label { get; set; }
+
+
+        [Outlet]
         UIKit.UITableView tableView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (label != null) {
+                label.Dispose ();
+                label = null;
+            }
+
             if (tableView != null) {
                 tableView.Dispose ();
                 tableView = null;
