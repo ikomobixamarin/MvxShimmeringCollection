@@ -125,6 +125,7 @@
     <Compile Include="ShimmeringTableViewCell.designer.cs">
       <DependentUpon>ShimmeringTableViewCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyTableViewSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvxShimmeringCollection.Shared\MvxShimmeringCollection.Shared.csproj">

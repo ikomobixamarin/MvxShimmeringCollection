@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Foundation;
 using MvvmCross.Platforms.Ios.Binding.Views;
 using UIKit;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace MvxShimmering
 {
-    public class MvxShimmeringSimpleTableViewSource : MvxSimpleTableViewSource
+    public abstract class MvxShimmeringTableViewSource : MvxTableViewSource
     {
         private int numberOfShimmeringCells;
 
@@ -34,23 +34,13 @@ namespace MvxShimmering
             }
         }
 
-        public MvxShimmeringSimpleTableViewSource(IntPtr handle)
+        public MvxShimmeringTableViewSource(IntPtr handle)
             : base(handle)
         {
         }
 
-        public MvxShimmeringSimpleTableViewSource(UITableView tableView, string cellIdentifier)
-            : base(tableView, cellIdentifier)
-        {
-        }
-
-        public MvxShimmeringSimpleTableViewSource(UITableView tableView, Type cellType, string cellIdentifier = null)
-            : base(tableView, cellType, cellIdentifier)
-        {
-        }
-
-        public MvxShimmeringSimpleTableViewSource(UITableView tableView, string nibName, string cellIdentifier = null, NSBundle bundle = null)
-            : base(tableView, nibName, cellIdentifier, bundle)
+        public MvxShimmeringTableViewSource(UITableView tableView)
+            : base(tableView)
         {
         }
 
@@ -68,7 +58,10 @@ namespace MvxShimmering
                 return this.TableView.DequeueReusableCell(this.ShimmeringCellId);
             }
 
-            return base.GetOrCreateCellFor(tableView, indexPath, item);
+            return this.GetOrCreateNonShimmeringCellFor(tableView, indexPath, item);
         }
+
+        protected abstract UITableViewCell GetOrCreateNonShimmeringCellFor(UITableView tableView, NSIndexPath indexPath, object item);
+
     }
 }

@@ -22,11 +22,17 @@ namespace MvxShimmeringCollection.iOS
         {
             base.ViewDidLoad();
 
-            var viewSource = new MvxShimmeringSimpleTableViewSource(this.tableView, MyTableViewCell.Key);
+            // MvxShimmeringSimpleTableViewSource inherits from MvxSimpleTableViewSource
+            //var viewSource = new MvxShimmeringSimpleTableViewSource(this.tableView, MyTableViewCell.Key);
+            var viewSource = new MyTableViewSource(this.tableView);
 
             this.tableView.RowHeight = (nfloat)150;
             this.tableView.RegisterNibForCellReuse(MyTableViewCell.Nib, MyTableViewCell.Key);
             viewSource.SetShimmeringPlaceholder(ShimmeringTableViewCell.Nib, ShimmeringTableViewCell.Key);
+
+            // Override color codes used by the shimmering animation here
+            //ShimmerAnimationConfig.DarkColor = UIColor.Black.ColorWithAlpha(1f).CGColor;
+            //ShimmerAnimationConfig.LightColor = UIColor.White.ColorWithAlpha(0.1f).CGColor;
 
             this.tableView.Source = viewSource;
 
