@@ -7,6 +7,7 @@ using System.ComponentModel;
 
 namespace MvxShimmering
 {
+    [Protocol]
     [Register("ShimmeringView", true), DesignTimeVisible(true)]
     public class ShimmeringView : UIView
     {
