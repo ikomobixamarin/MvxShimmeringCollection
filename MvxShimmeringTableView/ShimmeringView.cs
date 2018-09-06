@@ -19,6 +19,12 @@ namespace MvxShimmering
             }
         }
 
+        public ShimmeringView(IntPtr handle)
+           : base(handle)
+        {
+
+        }
+
         public bool IsShimmering
         {
             get

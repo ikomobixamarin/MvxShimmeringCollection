@@ -12,7 +12,7 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>Ikomobi.MvxShimmeringTableview</PackageId>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
     <Authors>ikomobi</Authors>
     <PackageProjectUrl>https://github.com/ikomobixamarin/MvxShimmeringCollection</PackageProjectUrl>
     <Title>MvxShimmeringTableView</Title>
