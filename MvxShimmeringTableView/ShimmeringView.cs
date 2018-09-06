@@ -7,8 +7,7 @@ using System.ComponentModel;
 
 namespace MvxShimmering
 {
-    [Protocol]
-    [Register("ShimmeringView", true), DesignTimeVisible(true)]
+    [Register("ShimmeringView", IsWrapper = false), DesignTimeVisible(true)]
     public class ShimmeringView : UIView
     {
         public class ShimmeringViewAppearance : UIViewAppearance
